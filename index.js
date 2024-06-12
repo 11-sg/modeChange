@@ -1,3 +1,28 @@
+let modebtn=document.querySelector("button");
+modebtn.innerText="Dark Mode";
+let currmode="light";
+let body=document.querySelector("body");
+
+modebtn.addEventListener("blur", () => {
+    if(currmode === "light"){
+        currmode="dark";
+        body.classList.add("dark");
+        modebtn.innerText="Light Mode";
+        body.classList.remove("light");
+        console.log("dark");
+    }
+    else{
+    currmode="light";
+    body.classList.add("light");
+    modebtn.innerText="Dark Mode";
+    body.classList.remove("darkt");
+    console.log("light");
+}
+});
+
+
+
+
 // let fullname=prompt("Enter name");
 // console.log(fullname);
 // console.log("@"+fullname+"123");
@@ -116,25 +141,3 @@
 //     a++;
 //     console.log(a);
 // }
-
-let modebtn=document.querySelector("button");
-modebtn.innerText="Dark Mode";
-let currmode="light";
-let body=document.querySelector("body");
-
-modebtn.addEventListener("blur", () => {
-    if(currmode === "light"){
-        currmode="dark";
-        body.classList.add("dark");
-        modebtn.innerText="Light Mode";
-        body.classList.remove("light");
-        console.log("dark");
-    }
-    else{
-    currmode="light";
-    body.classList.add("light");
-    modebtn.innerText="Dark Mode";
-    body.classList.remove("darkt");
-    console.log("light");
-}
-});
